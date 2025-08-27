@@ -1,0 +1,329 @@
+{
+  "navbar": {
+    "home": "Accueil",
+    "dashboard": "Tableau de bord",
+    "account": "Mon compte",
+    "login": "Se connecter",
+    "language": "Langage",
+    "languageChanged": "Langage changé en français.",
+    "changingLanguage": "Changement de langage...",
+    "logout": "Se déconnecter",
+    "profile": "Profil"
+  },
+  "pages": {
+    "home": {
+      "welcome_message": "Bienvenue sur ce boilerplate !"
+    },
+    "account": {
+      "errors": {
+        "check_approval": "Veuillez cocher la case pour confirmer la suppression de votre compte.",
+        "password_min": "Le mot de passe doit comporter au moins 6 caractères.",
+        "name_min": "Le nom doit comporter au moins 2 caractères.",
+        "name_max": "Le nom doit comporter au maximum 25 caractères.",
+        "forename_min": "Le prénom doit comporter au moins 2 caractères.",
+        "forename_max": "Le prénom doit comporter au maximum 25 caractères.",
+        "username_min": "Le nom d'utilisateur doit comporter au moins 2 caractères.",
+        "username_max": "Le nom d'utilisateur doit comporter au maximum 25 caractères.",
+        "invalid_email": "Adresse e-mail invalide.",
+        "current_password_min": "Le mot de passe actuel doit comporter au moins 6 caractères.",
+        "new_password_min": "Le nouveau mot de passe doit comporter au moins 6 caractères.",
+        "new_password_max": "Le mot de passe doit comporter au maximum 25 caractères.",
+        "new_password_confirm_min": "La confirmation du nouveau mot de passe doit comporter au moins 6 caractères.",
+        "passwords_do_not_match": "Les mots de passe ne correspondent pas.",
+        "username_no_spaces": "Le nom d'utilisateur ne doit pas contenir d'espaces ni de lettres majuscules."
+      },
+      "account_settings_title": "Paramètres du compte",
+      "account_settings_description": "Mettez à jour vos informations personnelles et les détails de votre compte.",
+      "forename_label": "Prénom",
+      "name_label": "Nom",
+      "username_label": "Nom d'utilisateur",
+      "email_label": "Email",
+      "password_label": "Mot de passe",
+      "choose_image": "Choisir une image",
+      "delete_account_title": "Supprimer le compte",
+      "delete_account_description": "Soyez très prudent avec votre action, il n'y a pas de retour en arrière",
+      "accept_delete_account": "J'accepte de supprimer mon compte définitivement",
+      "accept_delete_account_description": "Veuillez noter que cette action est irréversible et supprimera toutes vos données et paramètres. Si vous êtes sûr, veuillez cocher la case pour confirmer.",
+      "password_placeholder": "********",
+      "delete_account_button": "Supprimer ce compte",
+      "edit_profile_title": "Modifier le profil",
+      "edit_profile_description": "Apportez des modifications à votre mot de passe ici. Cliquez sur enregistrer lorsque vous avez terminé.",
+      "current_password_label": "Mot de passe actuel",
+      "new_password_label": "Nouveau mot de passe",
+      "new_password_confirm_label": "Confirmation du nouveau mot de passe",
+      "updating_account": "Mise à jour du compte...",
+      "updating_password": "Mise à jour du mot de passe...",
+      "updating_profile_picture": "Mise à jour de la photo de profil...",
+      "change_password": "Changer le mot de passe",
+      "delete_account": "Supprimer le compte",
+      "deleting_account": "Suppression du compte...",
+      "actions": "Actions"
+    },
+    "login": {
+      "welcome_back": "Content de vous revoir",
+      "field": "Nom d'utilisateur ou email",
+      "field_description": "Entrez votre nom d'utilisateur ou email",
+      "password": "Mot de passe",
+      "password_description": "Entrez votre mot de passe",
+      "login_button": "Connexion",
+      "login_button_google": "Se connecter avec Google",
+      "no_account": "Vous n'avez pas de compte ?",
+      "sign_up": "S'inscrire",
+      "agree_terms": "En cliquant sur Connexion, vous acceptez nos Conditions Générales de Service.",
+      "errors": {
+        "login_name_min": "Nom d'utilisateur ou email doit comporter au moins 2 caractères",
+        "password_min": "Le mot de passe doit comporter au moins 6 caractères",
+        "password_max": "Le mot de passe doit comporter au plus 255 caractères",
+        "login_name_no_spaces": "Le nom d'utilisateur ou l'email ne doit pas contenir d'espaces ni de lettres majuscules."
+      },
+      "or_continue_with": "Ou continuer avec"
+    },
+    "register": {
+      "title": "Créer un compte",
+      "password_creation": "Créer un mot de passe ",
+      "forename": "Prénom",
+      "name": "Nom",
+      "username": "Nom d'utilisateur",
+      "username_description": "Entrez votre nom d'utilisateur",
+      "email": "Email",
+      "email_description": "Entrez votre email",
+      "password": "Mot de passe",
+      "password_description": "Entrez votre mot de passe",
+      "confirmPassword": "Confirmer le mot de passe",
+      "confirmPassword_description": "Entrez à nouveau votre mot de passe pour vérification",
+      "register": "S'inscrire",
+      "register_google": "S'inscrire avec Google",
+      "already_have_account": "Vous avez déjà un compte ?",
+      "login": "Connexion",
+      "terms_and_conditions": "En cliquant sur s'inscrire, vous acceptez nos Conditions d'utilisation et Conditions.",
+      "errors": {
+        "name_min": "Le nom doit comporter au moins 2 caractères.",
+        "name_max": "Le nom doit comporter au maximum 25 caractères.",
+        "forename_min": "Le prénom doit comporter au moins 2 caractères.",
+        "forename_max": "Le prénom doit comporter au maximum 25 caractères.",
+        "username_min": "Le nom d'utilisateur doit comporter au moins 2 caractères.",
+        "username_max": "Le nom d'utilisateur doit comporter au maximum 25 caractères.",
+        "username_no_spaces": "Le nom d'utilisateur ne doit pas contenir d'espaces ni de lettres majuscules.",
+        "invalid_email": "Veuillez entrer une adresse email valide.",
+        "password_max": "Le mot de passe doit comporter au maximum 255 caractères.",
+        "passwords_mismatch": "Les mots de passe ne correspondent pas.",
+        "password_invalid": "Le mot de passe doit contenir au moins 8 caractères, une lettre minuscule, une lettre majuscule, un chiffre et un caractère spécial."
+      }
+    },
+    "admin": {
+      "home": "Accueil",
+      "dashboard": "Tableau de bord",
+      "users": "Utilisateurs",
+      "settings": "Paramètres",
+      "admin": "Admin",
+      "logs": "Journaux",
+      "back_to_app": "Retour à l'accueil",
+      "dashboard_page": {
+        "active_users": "Utilisateurs actifs",
+        "total_users": "Utilisateurs totaux",
+        "auth_methods": "Méthodes d'authentification",
+        "auth_methods_description": "Cette section indique le nombre d'utilisateurs inscrits par méthode d'authentification.",
+        "of_users": "des utilisateurs"
+      },
+      "config_page": {
+        "title": "Configuration",
+        "description": "Cette page vous permet de configurer les paramètres de l'application. Assurez-vous d'enregistrer vos modifications avant de quitter cette page.",
+        "save_changes": "Enregistrer les modifications",
+        "updating_config": "Mise à jour de la configuration...",
+        "app_name": "Nom de l'application",
+        "app_name_description": "Saisissez le nom de votre application. Il sera affiché dans l'en-tête et à divers endroits de l'application.",
+        "accent_color": "Couleur d'accentuation",
+        "accent_color_description": "Choisissez la couleur d'accentuation de votre application. Elle sera utilisée à plusieurs endroits dans l'application."
+      },
+      "log_page": {
+        "level": "Niveau",
+        "user": "Utilisateur",
+        "unknow_user": "Utilisateur inconnu",
+        "message": "Message",
+        "date": "Date",
+        "actions": "Actions",
+        "copy_id": "Copier l'ID de la log",
+        "copy_id_success": "ID de la log copié dans le presse-papiers",
+        "delete_log": "Supprimer cette log",
+        "levels": {
+          "info": "Information",
+          "warn": "Avertissement",
+          "error": "Erreur",
+          "debug": "Débogage"
+        }
+      },
+      "users_page": {
+        "user": "Utilisateur",
+        "username": "Nom d'utilisateur",
+        "email": "E-mail",
+        "role": "Rôle",
+        "joined": "Inscrit le",
+        "actions": "Actions",
+        "auth_type": "Type d'authentification",
+        "roles": {
+          "admin": "Administrateur",
+          "user": "Utilisateur"
+        },
+        "a_user": "un utilisateur",
+        "actions_type": {
+          "create": "Créer",
+          "update": "Mettre à jour",
+          "delete": "Supprimer"
+        },
+        "copy_id": "Copier l'ID de l'utilisateur",
+        "copy_id_success": "ID de l'utilisateur copié dans le presse-papiers",
+        "delete_user": "Supprimer cet utilisateur",
+        "update_user": "Mettre à jour cet utilisateur",
+        "form": {
+          "name_min": "Le nom doit comporter au moins 2 caractères.",
+          "name_max": "Le nom doit comporter au maximum 25 caractères.",
+          "forename_min": "Le prénom doit comporter au moins 2 caractères.",
+          "forename_max": "Le prénom doit comporter au maximum 25 caractères.",
+          "username_min": "Le nom d'utilisateur doit comporter au moins 2 caractères.",
+          "username_max": "Le nom d'utilisateur doit comporter au maximum 25 caractères.",
+          "invalid_email": "Adresse e-mail invalide.",
+          "username_no_spaces": "Le nom d'utilisateur ne doit pas contenir d'espaces ni de lettres majuscules.",
+          "password_required": "Le mot de passe est requis.",
+          "confirm_delete_required": "Confirmez la suppression en tapant \"DELETE\".",
+          "forename": "Prénom",
+          "name": "Nom",
+          "username": "Nom d'utilisateur",
+          "email": "E-mail",
+          "password": "Mot de passe",
+          "generate_password": "Générer",
+          "copy_password": "Copier le mot de passe",
+          "no_password_yet": "Aucun mot de passe généré pour le moment",
+          "password_generated": "Mot de passe généré avec succès",
+          "password_copied": "Mot de passe copié dans le presse-papiers",
+          "role": "Rôle",
+          "select_role_placeholder": "Sélectionnez un rôle pour le nouvel utilisateur",
+          "user": "Utilisateur",
+          "admin": "Administrateur",
+          "save": "Enregistrer",
+          "update": "Mettre à jour",
+          "confirm_delete_label": "Tapez \"DELETE\" pour confirmer",
+          "confirm_delete_placeholder": "DELETE",
+          "delete": "Supprimer",
+          "confirm_text_invalid": "Le texte de confirmation est incorrect"
+        }
+      }
+    }
+  },
+  "components": {
+    "inputFile": {
+      "choose_file": "Choisir un fichier",
+      "choose_image": "Choisir une image"
+    },
+    "colorPicker": {
+      "preset_colors": "Couleurs prédéfinies",
+      "hex_color": "Couleur Hex",
+      "hue": "Teinte",
+      "saturation": "Saturation",
+      "lightness": "Luminosité"
+    },
+    "dataTable": {
+      "no_data": "Aucune donnée disponible",
+      "columns": "Colonnes",
+      "columns_list": {
+        "user": "Utilisateur",
+        "level": "Niveau",
+        "message": "Message",
+        "createdAt": "Date",
+        "username": "Nom d'utilisateur",
+        "email": "Email",
+        "role": "Rôle",
+        "auth_type": "Type d'authentification"
+      },
+      "create_entity": "Créer une nouvelle entité",
+      "delete_entity": "Supprimer toutes les entités",
+      "filters": {
+        "username": "Filtrer par nom d'utilisateur",
+        "message": "Filtrer par message"
+      },
+      "delete_title": "Supprimer toutes les entités",
+      "delete_description": "Êtes-vous sûr de vouloir supprimer toutes les entités ? Cette action est irréversible.",
+      "footer": {
+        "page": "Page",
+        "of": "sur",
+        "total": "total",
+        "entries": "entrées",
+        "first": "Première",
+        "last": "Dernière",
+        "next": "Suivant",
+        "previous": "Précédent",
+        "per_page": "par page",
+        "all": "Tout"
+      }
+    }
+  },
+  "global": {
+    "buttons": {
+      "cancel": "Annuler",
+      "save": "Enregistrer",
+      "update": "Mettre à jour",
+      "delete": "Supprimer"
+    },
+    "expired_session": "Votre session a expiré, veuillez vous reconnecter."
+  },
+  "server": {
+    "global": {
+      "errors": {
+        "missing_fields": "Veuillez remplir tous les champs obligatoires.",
+        "no_such_user": "Aucun utilisateur trouvé."
+      }
+    },
+    "auth": {
+      "errors": {
+        "regex": "Le mot de passe doit comporter au moins 8 caractères, dont au moins une minuscule, une majuscule, un chiffre et un caractère spécial",
+        "password_no_match": "Les mots de passe ne correspondent pas",
+        "email_taken": "Cet email est déjà utilisé",
+        "username_taken": "Ce nom d'utilisateur est déjà utilisé",
+        "invalid_credentials": "Identifiants invalides"
+      },
+      "messages": {
+        "register_success": "Inscription réussie",
+        "login_success": "Connexion réussie",
+        "logout_success": "Déconnexion réussie"
+      }
+    },
+    "upload": {
+      "errors": {
+        "no_file": "Aucun fichier téléchargé",
+        "invalid_file_type": "Type de fichier invalide. Seuls les fichiers jpg, jpeg, png, gif et svg sont autorisés",
+        "limit": "La taille du fichier dépasse la limite autorisée."
+      },
+      "messages": {
+        "avatar_success": "Avatar mis à jour avec succès"
+      }
+    },
+    "users": {
+      "errors": {
+        "email_taken": "Cet email est déjà utilisé",
+        "username_taken": "Ce nom d'utilisateur est déjà utilisé",
+        "invalid_role": "Rôle invalide",
+        "actual_password_incorrect": "Le mot de passe actuel est incorrect",
+        "regex_error": "Le mot de passe doit contenir au moins 8 caractères, incluant des majuscules, des minuscules, des chiffres et des caractères spéciaux.",
+        "passwords_do_not_match": "Le nouveau mot de passe et la confirmation ne correspondent pas",
+        "password_incorrect": "Le mot de passe est incorrect"
+      },
+      "messages": {
+        "user_created": "Utilisateur créé avec succès",
+        "user_updated": "Utilisateur mis à jour avec succès",
+        "password_updated": "Mot de passe mis à jour avec succès",
+        "user_deleted": "Utilisateur supprimé avec succès"
+      }
+    },
+    "admin": {
+      "errors": {
+        "invalid_config": "Configuration invalide",
+        "config_not_found": "Configuration non trouvée",
+        "log_not_found": "Aucune log trouvée"
+      },
+      "messages": {
+        "config_updated": "Configuration mise à jour avec succès",
+        "log_deleted": "Log supprimée avec succès",
+        "logs_cleared": "Logs supprimées avec succès"
+      }
+    }
+  }
+}
