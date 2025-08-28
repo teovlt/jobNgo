@@ -10,5 +10,10 @@ export interface IUser extends Document {
   role: string;
   avatar: string;
   auth_type: string;
+  birth_date: Date;
+  location?: {
+    country?: string;
+    state?: string;
+  };
   fullname?: string; // virtual
 }

@@ -13,6 +13,11 @@ const UserSchema = new Schema<IUser>(
     role: { type: String, default: userRoles.USER },
     avatar: { type: String, default: "" },
     auth_type: { type: String, default: authTypes.LOCAL },
+    birth_date: { type: Date, default: null },
+    location: {
+      country: String,
+      state: String,
+    },
   },
   { timestamps: true },
 );

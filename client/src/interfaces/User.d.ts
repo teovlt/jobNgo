@@ -12,4 +12,9 @@ export interface UserInterface {
   __v?: number;
   avatar?: string;
   auth_type: string;
+  birth_date?: Date;
+  location?: {
+    country?: string;
+    state?: string;
+  };
 }
