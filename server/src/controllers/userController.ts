@@ -103,7 +103,7 @@ export const createUser = async (req: Request, res: Response): Promise<void> => 
 export const updateUser = async (req: Request, res: Response): Promise<void> => {
   const { id } = req.params;
   const userId = req.userId;
-  const { name, forename, email, username, password, role } = req.body;
+  const { name, forename, email, username, password, role, birth_date, country, state } = req.body;
 
   try {
     if (email) {
@@ -152,6 +152,11 @@ export const updateUser = async (req: Request, res: Response): Promise<void> => 
         ...req.body,
         ...(req.body.email && { email: req.body.email.toLowerCase() }),
         ...(req.body.username && { username: req.body.username.toLowerCase() }),
+        birth_date: birth_date || null,
+        location: {
+          country: country || null,
+          state: state || null,
+        },
       },
       { new: true },
     );

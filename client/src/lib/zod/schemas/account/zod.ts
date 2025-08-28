@@ -17,6 +17,9 @@ export const getUpdateAccountSchema = (t: (key: string) => string) =>
       .regex(/^[^A-Z\s]+$/, { message: t("pages.account.errors.username_no_spaces") }),
 
     email: z.string().email({ message: t("pages.account.errors.invalid_email") }),
+    birth_date: z.date().nullable().optional(),
+    country: z.string().optional().or(z.literal("")),
+    state: z.string().optional().or(z.literal("")),
   });
 
 export const getUpdatePasswordSchema = (t: (key: string) => string) =>

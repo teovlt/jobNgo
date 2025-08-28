@@ -1,5 +1,5 @@
 import { Loading } from "@/components/customs/loading";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useAuthContext } from "@/contexts/authContext";
 import { Button } from "@/components/ui/button";
@@ -15,7 +15,7 @@ import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { InputFile } from "@/components/customs/inputFile";
 import { UpdatePasswordForm } from "./components/updatePasswordForm";
 import { Dialog } from "@radix-ui/react-dialog";
-import { EllipsisVertical, Trash } from "lucide-react";
+import { CalendarIcon, EllipsisVertical, Pencil, Trash } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -26,6 +26,12 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { DeleteAccountForm } from "./components/deleteAccountForm";
 import { useTranslation } from "react-i18next";
+import { Separator } from "@/components/ui/separator";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { cn } from "@/lib/utils";
+import { Calendar } from "@/components/ui/calendar";
+import { format } from "date-fns";
+import LocationSelector from "@/components/ui/location-input";
 
 export const Account = () => {
   const { authUser, setAuthUser, loading } = useAuthContext();
@@ -43,6 +49,9 @@ export const Account = () => {
       forename: authUser?.forename,
       username: authUser?.username,
       email: authUser?.email,
+      birth_date: authUser?.birth_date ? new Date(authUser.birth_date) : null,
+      country: authUser?.location?.country || "",
+      state: authUser?.location?.state || "",
     },
   });
 
@@ -121,13 +130,17 @@ export const Account = () => {
         </CardHeader>
         <CardContent>
           <div className="flex flex-col items-center gap-4 mb-8">
-            <div className="relative">
-              <Avatar className="w-28 h-28 ">
+            <div className="relative group">
+              <Avatar className="w-28 h-28">
                 <AvatarImage src={authUser?.avatar} alt="User Avatar" className="object-cover object-center w-full h-full rounded-full" />
               </Avatar>
-            </div>
-            <div>
-              <InputFile buttonText={t("choose_image")} id="profile-picture" disabled={loading} onChange={updateProfilePic} />
+              <label
+                htmlFor="profile-picture"
+                className="absolute inset-0 flex items-center justify-center rounded-full bg-black/40 opacity-0 group-hover:opacity-100 cursor-pointer transition-opacity"
+              >
+                <Pencil className="w-6 h-6 text-white" />
+              </label>
+              <input type="file" id="profile-picture" className="hidden" disabled={loading} onChange={updateProfilePic} />
             </div>
           </div>
           <Form {...updateForm}>
@@ -186,6 +199,69 @@ export const Account = () => {
                   </FormItem>
                 )}
               />
+              <div className="flex items-center justify-center gap-4">
+                <FormField
+                  control={updateForm.control}
+                  name="birth_date"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-col w-full">
+                      <FormLabel>Date of birth</FormLabel>
+                      <Popover>
+                        <PopoverTrigger asChild>
+                          <FormControl>
+                            <Button
+                              variant={"outline"}
+                              className={cn("w-full pl-3 text-left font-normal", !field.value && "text-muted-foreground")}
+                            >
+                              {field.value ? format(field.value, "PPP") : <span>Pick a date</span>}
+                              <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                            </Button>
+                          </FormControl>
+                        </PopoverTrigger>
+                        <PopoverContent className="w-75 p-0" align="start">
+                          <Calendar
+                            className="w-full"
+                            mode="single"
+                            selected={field.value ?? undefined}
+                            onSelect={field.onChange}
+                            disabled={(date) => date > new Date() || date < new Date("1900-01-01")}
+                            captionLayout="dropdown"
+                            defaultMonth={field.value ?? new Date()}
+                          />
+                        </PopoverContent>
+                      </Popover>
+                      <FormDescription>Your date of birth is used to calculate your age.</FormDescription>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={updateForm.control}
+                  name="country"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-col w-full">
+                      <FormLabel>Location</FormLabel>
+                      <FormControl>
+                        <LocationSelector
+                          state={updateForm.getValues("state")}
+                          country={updateForm.getValues("country")}
+                          onCountryChange={(country) => {
+                            updateForm.setValue("country", country?.name ?? "");
+                            updateForm.setValue("state", "");
+                          }}
+                          onStateChange={(state) => {
+                            updateForm.setValue("state", state?.name ?? "");
+                          }}
+                        />
+                      </FormControl>
+                      <FormDescription>If your country has states, it will appear after selecting country</FormDescription>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+              <Separator />
 
               <FormItem>
                 <div className="flex flex-col w-full gap-2">
