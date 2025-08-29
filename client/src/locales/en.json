@@ -62,7 +62,13 @@
       "birth_date_placeholder": "Pick a date",
       "birth_date_description": "Your date of birth is used to calculate your age.",
       "location_label": "Location",
-      "location_description": "If your country has states, it will appear after selecting country"
+      "location_description": "If your country has states, it will appear after selecting country",
+      "select_country": "Select Country...",
+      "search_country": "Search country...",
+      "no_country_found": "No country found.",
+      "select_state": "Select State...",
+      "search_state": "Search state...",
+      "no_state_found": "No state found."
     },
     "login": {
       "welcome_back": "Welcome Back",

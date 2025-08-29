@@ -62,7 +62,13 @@
       "birth_date_placeholder": "Choisis une date",
       "birth_date_description": "Ta date de naissance est utilisée pour calculer ton âge.",
       "location_label": "Localisation",
-      "location_description": "Les régions apparaîtront après avoir choisi un pays."
+      "location_description": "Les régions apparaîtront après avoir choisi un pays.",
+      "select_country": "Sélectionner un pays...",
+      "search_country": "Rechercher un pays...",
+      "no_country_found": "Aucun pays trouvé.",
+      "select_state": "Sélectionner un état...",
+      "search_state": "Rechercher un état...",
+      "no_state_found": "Aucun état trouvé."
     },
     "login": {
       "welcome_back": "Content de vous revoir",

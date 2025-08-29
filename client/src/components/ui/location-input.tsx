@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 // Import JSON data directly
 import countries from "@/data/countries.json";
 import states from "@/data/states.json";
+import { useTranslation } from "react-i18next";
 
 interface Timezone {
   zoneName: string;
@@ -65,6 +66,8 @@ interface LocationSelectorProps {
 }
 
 const LocationSelector = ({ disabled, onCountryChange, onStateChange, state, country }: LocationSelectorProps) => {
+  const { t } = useTranslation();
+
   // Cast imported JSON data to their respective types
   const countriesData = countries as CountryProps[];
   const statesData = states as StateProps[];
@@ -112,16 +115,16 @@ const LocationSelector = ({ disabled, onCountryChange, onStateChange, state, cou
                 <span>{selectedCountry.name}</span>
               </div>
             ) : (
-              <span>Select Country...</span>
+              <span>{t("pages.account.select_country")}</span>
             )}
             <ChevronsUpDown className="h-4 w-4 shrink-0 opacity-50" />
           </Button>
         </PopoverTrigger>
         <PopoverContent className="p-0">
           <Command>
-            <CommandInput placeholder="Search country..." />
+            <CommandInput placeholder={t("pages.account.search_country")} />
             <CommandList>
-              <CommandEmpty>No country found.</CommandEmpty>
+              <CommandEmpty>{t("pages.account.no_country_found")}</CommandEmpty>
               <CommandGroup>
                 <ScrollArea className="h-[300px]">
                   {countriesData.map((country) => (
@@ -149,7 +152,7 @@ const LocationSelector = ({ disabled, onCountryChange, onStateChange, state, cou
         </PopoverContent>
       </Popover>
 
-      {/* State Selector - Only shown if selected country has states */}
+      {/* State Selector */}
       {availableStates.length > 0 && (
         <Popover open={openStateDropdown} onOpenChange={setOpenStateDropdown}>
           <PopoverTrigger asChild>
@@ -160,15 +163,15 @@ const LocationSelector = ({ disabled, onCountryChange, onStateChange, state, cou
               disabled={!selectedCountry}
               className="w-full justify-between"
             >
-              {selectedState ? <span>{selectedState.name}</span> : <span>Select State...</span>}
+              {selectedState ? <span>{selectedState.name}</span> : <span>{t("pages.account.select_state")}</span>}
               <ChevronsUpDown className="h-4 w-4 shrink-0 opacity-50" />
             </Button>
           </PopoverTrigger>
           <PopoverContent className="p-0">
             <Command>
-              <CommandInput placeholder="Search state..." />
+              <CommandInput placeholder={t("pages.account.search_state")} />
               <CommandList>
-                <CommandEmpty>No state found.</CommandEmpty>
+                <CommandEmpty>{t("pages.account.no_state_found")}</CommandEmpty>
                 <CommandGroup>
                   <ScrollArea className="h-[300px]">
                     {availableStates.map((state) => (
