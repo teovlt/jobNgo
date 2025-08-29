@@ -32,9 +32,13 @@ import { Calendar } from "@/components/ui/calendar";
 import { format } from "date-fns";
 import LocationSelector from "@/components/ui/location-input";
 
+import { fr, enUS } from "date-fns/locale";
+import i18next from "i18next";
+
 export const Account = () => {
   const { authUser, setAuthUser, loading } = useAuthContext();
   const { t } = useTranslation();
+  const locales = { fr, en: enUS };
 
   const [updateLoading, setUpdateLoading] = useState(false);
   const [openUpdatePasswordDialog, setOpenUpdatePasswordDialog] = useState(false);
@@ -212,7 +216,11 @@ export const Account = () => {
                               variant={"outline"}
                               className={cn("w-full pl-3 text-left font-normal", !field.value && "text-muted-foreground")}
                             >
-                              {field.value ? format(field.value, "PPP") : <span>{t("pages.account.birth_date_placeholder")}</span>}
+                              {field.value ? (
+                                format(field.value, "PPP", { locale: locales[i18next.language as "fr" | "en"] ?? enUS })
+                              ) : (
+                                <span>{t("pages.account.birth_date_placeholder")}</span>
+                              )}{" "}
                               <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
                             </Button>
                           </FormControl>
