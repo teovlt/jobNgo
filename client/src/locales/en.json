@@ -57,7 +57,12 @@
       "change_password": "Change Password",
       "delete_account": "Delete account",
       "deleting_account": "Deleting account...",
-      "actions": "Actions"
+      "actions": "Actions",
+      "birth_date_label": "Date of birth",
+      "birth_date_placeholder": "Pick a date",
+      "birth_date_description": "Your date of birth is used to calculate your age.",
+      "location_label": "Location",
+      "location_description": "If your country has states, it will appear after selecting country"
     },
     "login": {
       "welcome_back": "Welcome Back",

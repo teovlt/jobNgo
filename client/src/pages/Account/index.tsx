@@ -12,7 +12,6 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { axiosConfig } from "@/config/axiosConfig";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import { InputFile } from "@/components/customs/inputFile";
 import { UpdatePasswordForm } from "./components/updatePasswordForm";
 import { Dialog } from "@radix-ui/react-dialog";
 import { CalendarIcon, EllipsisVertical, Pencil, Trash } from "lucide-react";
@@ -205,7 +204,7 @@ export const Account = () => {
                   name="birth_date"
                   render={({ field }) => (
                     <FormItem className="flex flex-col w-full">
-                      <FormLabel>Date of birth</FormLabel>
+                      <FormLabel>{t("pages.account.birth_date_label")}</FormLabel>
                       <Popover>
                         <PopoverTrigger asChild>
                           <FormControl>
@@ -213,7 +212,7 @@ export const Account = () => {
                               variant={"outline"}
                               className={cn("w-full pl-3 text-left font-normal", !field.value && "text-muted-foreground")}
                             >
-                              {field.value ? format(field.value, "PPP") : <span>Pick a date</span>}
+                              {field.value ? format(field.value, "PPP") : <span>{t("pages.account.birth_date_placeholder")}</span>}
                               <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
                             </Button>
                           </FormControl>
@@ -230,7 +229,7 @@ export const Account = () => {
                           />
                         </PopoverContent>
                       </Popover>
-                      <FormDescription>Your date of birth is used to calculate your age.</FormDescription>
+                      <FormDescription>{t("pages.account.birth_date_description")}</FormDescription>
                       <FormMessage />
                     </FormItem>
                   )}
@@ -241,7 +240,7 @@ export const Account = () => {
                   name="country"
                   render={({ field }) => (
                     <FormItem className="flex flex-col w-full">
-                      <FormLabel>Location</FormLabel>
+                      <FormLabel>{t("pages.account.location_label")}</FormLabel>
                       <FormControl>
                         <LocationSelector
                           state={updateForm.getValues("state")}
@@ -255,7 +254,7 @@ export const Account = () => {
                           }}
                         />
                       </FormControl>
-                      <FormDescription>If your country has states, it will appear after selecting country</FormDescription>
+                      <FormDescription>{t("pages.account.location_description")}</FormDescription>
                       <FormMessage />
                     </FormItem>
                   )}

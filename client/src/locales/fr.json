@@ -57,7 +57,12 @@
       "change_password": "Changer le mot de passe",
       "delete_account": "Supprimer le compte",
       "deleting_account": "Suppression du compte...",
-      "actions": "Actions"
+      "actions": "Actions",
+      "birth_date_label": "Date de naissance",
+      "birth_date_placeholder": "Choisis une date",
+      "birth_date_description": "Ta date de naissance est utilisée pour calculer ton âge.",
+      "location_label": "Localisation",
+      "location_description": "Les régions apparaîtront après avoir choisi un pays."
     },
     "login": {
       "welcome_back": "Content de vous revoir",
